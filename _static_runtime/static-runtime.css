@@ -21,3 +21,52 @@ html:not(.ss-static-runtime) .Reveal-module__vCs_Ea__reveal {
   line-height: 1.8;
   color: #7a4a16;
 }
+
+/* THREE REASONS: 四角にカーソルを合わせたときの浮き出るアニメーション（影）を無効化 */
+.StrengthCards-module__prvV3W__card {
+  transition: border-color .4s var(--ease-out) !important;
+}
+.StrengthCards-module__prvV3W__card:hover {
+  box-shadow: none !important;
+}
+
+/* セクション背景の大きい薄い英字（ghostText）を非表示化 */
+.ghostText {
+  display: none !important;
+}
+
+/* THREE PILLARS: 丸マーク削除に伴う2列グリッド化およびアニメーション無効化 */
+.ThreePillarsSection-module__YCpk2W__row {
+  grid-template-columns: 40px 1fr !important;
+}
+.ThreePillarsSection-module__YCpk2W__body {
+  max-width: none !important;
+}
+.ThreePillarsSection-module__YCpk2W__row.hoverLift:hover {
+  transform: none !important;
+}
+.ThreePillarsSection-module__YCpk2W__row:hover .ThreePillarsSection-module__YCpk2W__mark {
+  transform: none !important;
+}
+.ThreePillarsSection-module__YCpk2W__mark {
+  transition: border-color .4s var(--ease-out), color .4s var(--ease-out) !important;
+}
+
+/* 公式LINEボタンのスタイル */
+.CtaButton-module__YcQGIq__line {
+  background: #06C755 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #06C755 !important;
+  box-shadow: 0 4px 14px -4px rgba(6, 199, 85, 0.4) !important;
+}
+.CtaButton-module__YcQGIq__line:hover {
+  background: #05b34c !important;
+  border-color: #05b34c !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 28px -10px rgba(6, 199, 85, 0.6) !important;
+}
+.FinalCta-module__IPvEmW__ctas {
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
