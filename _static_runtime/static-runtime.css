@@ -70,3 +70,66 @@ html:not(.ss-static-runtime) .Reveal-module__vCs_Ea__reveal {
   justify-content: center !important;
 }
 
+
+/* トップページ: セクション余白半減 */
+.section-half-padding {
+  padding-block: 36px !important;
+}
+@media (min-width: 768px) {
+  .section-half-padding {
+    padding-block: 74px !important;
+  }
+}
+
+/* カリキュラム: 02 完全1対1の価値のカードホバーアニメーション無効化 */
+.page-module__EJ-sxq__valueCard:hover {
+  transform: none !important;
+  box-shadow: var(--shadow-card-soft) !important;
+}
+
+/* カリキュラム: 02と03の間の余白短縮 */
+.curriculum-section-02 {
+  padding-bottom: 24px !important;
+}
+.curriculum-section-03 {
+  padding-top: 24px !important;
+}
+@media (min-width: 768px) {
+  .curriculum-section-02 {
+    padding-bottom: 40px !important;
+  }
+  .curriculum-section-03 {
+    padding-top: 40px !important;
+  }
+}
+
+/* 中学1・2年、高校1・2年講座: 見出しの折り返し防止 */
+.title-nowrap {
+  white-space: nowrap !important;
+  text-wrap: nowrap !important;
+}
+@media (max-width: 480px) {
+  .title-nowrap {
+    font-size: clamp(1.4rem, 6vw, 1.9rem) !important;
+  }
+}
+
+/* 教室紹介: Final CTA 見出しと本文の折り返し防止 */
+.FinalCta-module__IPvEmW__inner {
+  max-width: 900px !important;
+}
+.FinalCta-module__IPvEmW__title {
+  white-space: nowrap !important;
+}
+.FinalCta-module__IPvEmW__body {
+  max-width: none !important;
+  white-space: nowrap !important;
+}
+@media (max-width: 767px) {
+  .FinalCta-module__IPvEmW__title {
+    white-space: normal !important;
+  }
+  .FinalCta-module__IPvEmW__body {
+    white-space: normal !important;
+  }
+}
