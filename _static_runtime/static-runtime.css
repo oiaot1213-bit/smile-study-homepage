@@ -52,22 +52,51 @@ html:not(.ss-static-runtime) .Reveal-module__vCs_Ea__reveal {
   transition: border-color .4s var(--ease-out), color .4s var(--ease-out) !important;
 }
 
-/* 公式LINEボタンのスタイル */
-.CtaButton-module__YcQGIq__line {
-  background: #06C755 !important;
-  color: #ffffff !important;
-  border: 1.5px solid #06C755 !important;
-  box-shadow: 0 4px 14px -4px rgba(6, 199, 85, 0.4) !important;
-}
-.CtaButton-module__YcQGIq__line:hover {
-  background: #05b34c !important;
-  border-color: #05b34c !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 14px 28px -10px rgba(6, 199, 85, 0.6) !important;
-}
+/* CTA ボタングループの配置: 上に2つ横並び、下にLINEボタンを中央詰め */
 .FinalCta-module__IPvEmW__ctas {
+  display: flex !important;
   flex-wrap: wrap !important;
   justify-content: center !important;
+  gap: 14px !important;
+}
+.FinalCta-module__IPvEmW__ctas .CtaButton-module__YcQGIq__line {
+  flex-basis: 100% !important;
+  width: auto !important;
+  max-width: 320px !important;
+  margin-inline: auto !important;
+}
+
+/* 1. 無料体験授業を相談する: うっすら緑の枠線をグレーに変更 */
+.CtaButton-module__YcQGIq__primary {
+  box-shadow: 0 0 0 1.5px #f6f4ec47, var(--shadow-card-soft) !important;
+}
+
+/* 2. 個別学習相談を予約する: ホバー時に枠線が緑になるのを抑え、落ち着いた色を維持 */
+.CtaButton-module__YcQGIq__btn.CtaButton-module__YcQGIq__onNavy.CtaButton-module__YcQGIq__secondary:hover {
+  border-color: #f6f4ec80 !important;
+  background: #ffffff1a !important;
+}
+
+/* 3. 公式LINEボタン: 通常時は背景透明・枠線と文字を当塾の緑色、ホバーで当塾の緑色に変化 */
+.CtaButton-module__YcQGIq__line {
+  background: #ffffff0f !important;
+  color: var(--c-green-deep, #4da53c) !important;
+  border: 1.5px solid var(--c-green-deep, #4da53c) !important;
+  box-shadow: none !important;
+  transition: all .3s var(--ease-out) !important;
+}
+.CtaButton-module__YcQGIq__line .CtaButton-module__YcQGIq__arrow {
+  color: var(--c-green-deep, #4da53c) !important;
+}
+.CtaButton-module__YcQGIq__line:hover {
+  background: var(--c-green-deep, #4da53c) !important;
+  color: #ffffff !important;
+  border-color: var(--c-green-deep, #4da53c) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px -6px rgba(77, 165, 60, 0.5) !important;
+}
+.CtaButton-module__YcQGIq__line:hover .CtaButton-module__YcQGIq__arrow {
+  color: #ffffff !important;
 }
 
 
@@ -132,4 +161,172 @@ html:not(.ss-static-runtime) .Reveal-module__vCs_Ea__reveal {
   .FinalCta-module__IPvEmW__body {
     white-space: normal !important;
   }
+}
+
+/* 授業形態: FOUR CIRCLES の円矢印非表示および PC 縦2横2レイアウト */
+.FourScSection-module__IQ6W-W__rowMark {
+  display: none !important;
+}
+.FourScSection-module__IQ6W-W__row {
+  grid-template-columns: 40px 1fr !important;
+}
+.FourScSection-module__IQ6W-W__row.hoverLift:hover {
+  transform: none !important;
+}
+@media (min-width: 768px) {
+  .FourScSection-module__IQ6W-W__list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 48px !important;
+    row-gap: 0 !important;
+  }
+}
+
+/* お問い合わせ: アコーディオンメニュー */
+details.contact-accordion summary::-webkit-details-marker {
+  display: none;
+}
+details.contact-accordion summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+.contact-accordion__summary {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-bottom: 0 !important;
+}
+details[open].contact-accordion > .contact-accordion__summary {
+  margin-bottom: 8px !important;
+}
+.contact-accordion__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .3s var(--ease-out);
+  color: var(--t-faint, #8a93a6);
+}
+details[open] > .contact-accordion__summary .contact-accordion__icon svg {
+  transform: rotate(180deg);
+}
+.contact-accordion__content {
+  animation: contactAccordionFade .3s var(--ease-out);
+}
+@keyframes contactAccordionFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* お知らせ: 越谷校仕様のカードグリッド雛形スタイル */
+.BBC7fG__grid {
+  display: grid;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .BBC7fG__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.BBC7fG__card {
+  display: flex;
+  flex-direction: column;
+  background: var(--c-white, #ffffff);
+  border: 1px solid var(--c-blue-gray-deep, #e2e8f0);
+  border-radius: var(--radius-lg, 0.5rem);
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow .3s var(--ease-out), transform .3s var(--ease-out);
+  height: 100%;
+}
+.BBC7fG__card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card, 0 10px 25px -5px rgba(0, 0, 0, 0.1));
+}
+.BBC7fG__thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #f1f5f9;
+}
+.BBC7fG__body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.BBC7fG__date {
+  font-family: var(--font-en, sans-serif);
+  font-size: 13px;
+  color: var(--t-faint, #8a93a6);
+  margin-bottom: 8px;
+}
+.BBC7fG__title {
+  font-family: var(--font-jp-heading, sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--t-main, #16213a);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.BBC7fG__badges {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+.BBC7fG__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--c-sand-deep, #e6d3ac);
+  color: var(--t-main, #16213a);
+  font-size: 11px;
+  font-weight: 700;
+}
+.BBC7fG__excerpt {
+  font-size: 13.5px;
+  color: var(--t-sub, #5b6b82);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+/* 講師紹介: 特徴カードを縦並びにし、PC表示時はタイトルと説明文を1行に */
+.page-module__dmOpMq__pointsGrid {
+  grid-template-columns: 1fr !important;
+  gap: 16px !important;
+}
+@media (min-width: 768px) {
+  .page-module__dmOpMq__pointCard {
+    display: flex !important;
+    align-items: center !important;
+    gap: 32px !important;
+    padding: 20px 28px !important;
+  }
+  .page-module__dmOpMq__pointTitle {
+    margin-bottom: 0 !important;
+    flex: none !important;
+    width: 210px !important;
+    white-space: nowrap !important;
+  }
+  .page-module__dmOpMq__pointBody {
+    margin: 0 !important;
+  }
+}
+
+/* 合格実績: 小見出しのタグ部分が途中で折り返されないように制御 */
+.page-module__IoBACW__voiceResultTag {
+  white-space: nowrap !important;
 }
