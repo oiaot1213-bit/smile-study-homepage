@@ -330,3 +330,9 @@ details[open] > .contact-accordion__summary .contact-accordion__icon svg {
 .page-module__IoBACW__voiceResultTag {
   white-space: nowrap !important;
 }
+
+/* カリキュラム各講座: 「80分授業の一例」の下の余分な線を削除し、各行の間隔を均一に揃える */
+.page-module__LQPW5G__individual {
+  border-top: none !important;
+  padding-top: 0 !important;
+}
