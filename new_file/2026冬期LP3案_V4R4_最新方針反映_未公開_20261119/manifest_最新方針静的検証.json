@@ -1,0 +1,35 @@
+[
+  {
+    "name": "01_中1中2_冬期LP_V4R4方向_非公開プレビュー.html",
+    "old_sha256": "3524914547c4fdafcaa1992cd709e86c3080526835c95100491e8afb7363bc21",
+    "new_sha256": "c574b421b0562e2172a338759881801ff9acb14ce6ad7d2d2d34d2d8a2da9455",
+    "changed_spans": 1,
+    "money_amount_mentions": 0,
+    "deadline_20270117_count": 0,
+    "end_20270131_preserved": true,
+    "image_count": 7,
+    "anchors": 16
+  },
+  {
+    "name": "02_中3_冬期LP_V4R4方向_非公開プレビュー.html",
+    "old_sha256": "77db674b28e86fb1b202f01569ffc9770b643c806f10c1bcb7cee0d1573b49b5",
+    "new_sha256": "c8471ca5aed2e086a04cac67a7f39690c6dc5657f9fb2cdab087c55178624582",
+    "changed_spans": 1,
+    "money_amount_mentions": 0,
+    "deadline_20270117_count": 0,
+    "end_20270131_preserved": true,
+    "image_count": 7,
+    "anchors": 16
+  },
+  {
+    "name": "03_高校生_冬期LP_V4R4方向_非公開プレビュー.html",
+    "old_sha256": "7f15587a954b64619bf6a4fe991ef1dc506f52d562f82019519a39a1464a6dc7",
+    "new_sha256": "40b41ecb6333e9c5ae4bd83e9c560fa462282577ee82d7be03725ddf23b06a99",
+    "changed_spans": 1,
+    "money_amount_mentions": 0,
+    "deadline_20270117_count": 0,
+    "end_20270131_preserved": true,
+    "image_count": 7,
+    "anchors": 16
+  }
+]
