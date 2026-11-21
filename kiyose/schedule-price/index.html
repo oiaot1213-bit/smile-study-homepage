@@ -191,7 +191,7 @@
             <p class="eyebrow eyebrow--onNavy">SCHEDULE &amp; PRICE</p>
             <h1 class="PageHero-module__aE6RSq__title">時間割・価格</h1>
             <p class="PageHero-module__aE6RSq__lead">
-              水曜定休、 1 コマ 80 分の完全 1 対 1 授業です。月謝は「コマ代・施設管理費・定額サポート費」の 3 つで決まります。具体的な金額は、お問い合わせ・面談の際にご案内します。
+              1 コマ 80 分の完全 1 対 1 授業です。月謝は「コマ代・施設管理費・定額サポート費」の 3 つで決まります。具体的な金額は、お問い合わせ・面談の際にご案内します。
             </p>
           </div>
           <div class="PageHero-module__aE6RSq__imageWrap">
@@ -211,23 +211,20 @@
             <p class="eyebrow">OPEN HOURS</p>
             <h2 class="SectionTitle-module__9SotCq__heading">開校時間帯</h2>
             <span aria-hidden="true" class="SectionTitle-module__9SotCq__rule"></span>
-            <p class="SectionTitle-module__9SotCq__lead">1 コマ 80 分授業。水曜日は定休日です。</p>
+            <p class="SectionTitle-module__9SotCq__lead">1 コマ 80 分授業。土日祝日も開校しております。(年末年始・ゴールデンウィーク期間・お盆期間を除く)</p>
           </div>
           <figure class="page-module__rgAlwq__timetable">
             <img
-              alt="時間割：月・火・木・金は 17:00 〜 18:20 、 18:30 〜 19:50 、 20:00 〜 21:20 。土・日はこれに加えて 14:00 〜 15:20 、 15:30 〜 16:50 。水曜日は定休日。"
+              alt="時間割：月〜日は 17:00 〜 18:20 、 18:30 〜 19:50 、 20:00 〜 21:20 。土・日はこれに加えて 14:00 〜 15:20 、 15:30 〜 16:50 。"
               class="page-module__rgAlwq__timetableImg"
               data-nimg="1"
               decoding="async"
-              height="754"
+              height="737"
               loading="lazy"
               src="./assets/image.png"
               style="color: transparent"
-              width="1057"
+              width="1024"
             />
-            <figcaption class="page-module__rgAlwq__timetableNote">
-              2026 年 11 月のプレオープン、 12 月の完全オープンに向けて準備中です。内容は変更となる場合があります。
-            </figcaption>
           </figure>
           <div class="page-module__rgAlwq__sectionGap">
             <div class="Reveal-module__vCs_Ea__reveal SectionTitle-module__9SotCq__wrap" style="transition-delay: 0ms">
@@ -238,79 +235,171 @@
                 月謝は、受けた分だけのコマ代と、毎月定額の費用に分かれています。具体的な金額は、お子様の学年・コース・通塾回数をうかがったうえで個別にご案内します。
               </p>
             </div>
-            <p class="page-module__rgAlwq__campusNote">
-              <span class="page-module__rgAlwq__campusLabel">料金のご案内について</span
-              >具体的な料金は、<strong>お問い合わせ・面談の際に個別にご案内</strong>しています。
-              このページの内容は<strong>1 対 1 スマイルスタディ清瀬校</strong>のもので、春日部校をはじめ他の校舎とは料金・割引・適用条件が異なります。
-            </p>
+            
+            <!-- ===== 費用について（モデルケース & 初期費用） ===== -->
             <div class="page-module__rgAlwq__block">
-              <h3 class="page-module__rgAlwq__subHead" data-tone="green">月謝のしくみ</h3>
+              <h3 class="page-module__rgAlwq__subHead" data-tone="green">費用について</h3>
+              <div class="price-summary-grid">
+                <!-- 初期費用・諸経費 -->
+                <div class="price-summary-card">
+                  <span class="price-summary-badge">今なら無料体験受付中</span>
+                  <h4 class="price-summary-cardTitle">初期費用・諸経費</h4>
+                  <div class="price-summary-item">
+                    <p class="price-summary-itemLabel">入塾金</p>
+                    <p class="price-summary-itemValue">0<span>円</span></p>
+                  </div>
+                  <div class="price-summary-item">
+                    <p class="price-summary-itemLabel">生徒管理費（月額）</p>
+                    <p class="price-summary-itemValue">2,850<span>円</span> 〜 3,060<span>円</span></p>
+                  </div>
+                  <p class="price-summary-note">※学年・受講コースにより異なります。</p>
+                </div>
+
+                <!-- 受講モデルケース -->
+                <div class="price-summary-card">
+                  <h4 class="price-summary-cardTitle">受講モデルケース</h4>
+                  <div class="price-model-header">
+                    <p class="price-model-target">中学 2 年生・週 1 コース</p>
+                    <p class="price-model-detail">（ 1 コマ 80 分の完全 1 対 1 授業）</p>
+                  </div>
+                  <div class="price-model-table">
+                    <div class="price-model-row">
+                      <span>授業料</span>
+                      <span>16,940 円</span>
+                    </div>
+                    <div class="price-model-row">
+                      <span>生徒管理費</span>
+                      <span>2,850 円</span>
+                    </div>
+                    <div class="price-model-rowTotal">
+                      <span class="price-model-totalLabel">月額合計</span>
+                      <span class="price-model-totalValue">19,790<span>円</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===== 料金の比較（棒グラフアニメーション） ===== -->
+            <div class="page-module__rgAlwq__block" style="margin-top: 56px;">
+              <h3 class="page-module__rgAlwq__subHead" data-tone="orange">料金の比較</h3>
+              <div class="Reveal-module__vCs_Ea__reveal price-compare-box" style="transition-delay: 100ms; margin-top: 24px;">
+                <div class="price-compare-intro">
+                  <p class="price-compare-introLead">中学 2 年生・週 1 回の月額で比べると</p>
+                  <p class="price-compare-introSub">授業料と、管理費などの毎月かかる費用を含めた月額（税込）</p>
+                </div>
+                <div class="price-chart-list">
+                  <!-- 1. 大手の完全1対1 -->
+                  <div class="price-chart-row">
+                    <div class="price-chart-labelCol">
+                      <span class="price-chart-labelMain">大手の完全 1 対 1</span>
+                      <span class="price-chart-labelSub">※当塾調べ</span>
+                    </div>
+                    <div class="price-chart-barTrack">
+                      <div class="price-chart-barFill price-chart-barFill--gray" style="--chart-w: 92%;">
+                        <span class="price-chart-barText">月 4 万円前後</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 2. 1対2の個別指導 -->
+                  <div class="price-chart-row">
+                    <div class="price-chart-labelCol">
+                      <span class="price-chart-labelMain">1 対 2 の個別指導</span>
+                      <span class="price-chart-labelSub">※当塾調べ</span>
+                    </div>
+                    <div class="price-chart-barTrack">
+                      <div class="price-chart-barFill price-chart-barFill--lightGreen" style="--chart-w: 50%;">
+                        <span class="price-chart-barText" style="color: var(--c-green-deep);">清瀬校とほぼ同じ</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 3. スマイルスタディ清瀬校 -->
+                  <div class="price-chart-row">
+                    <div class="price-chart-labelCol">
+                      <span class="price-chart-labelMain">スマイルスタディ清瀬校</span>
+                      <span class="price-chart-labelSub">完全 1 対 1 ・ 1 コマ 80 分</span>
+                    </div>
+                    <div class="price-chart-barTrack">
+                      <div class="price-chart-barFill price-chart-barFill--smile" style="--chart-w: 49.5%;">
+                        <span class="price-chart-barText price-chart-barText--white">19,790 円</span>
+                      </div>
+                      <span class="price-chart-barText--outside price-chart-barText--smileOut" style="--chart-w: 49.5%;">入塾金 0 円</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ハイライト2枠 -->
+                <div class="price-compare-highlights">
+                  <div class="price-compare-hlBox">
+                    <p class="price-compare-hlSub">大手の完全 1 対 1 と比べて</p>
+                    <p class="price-compare-hlMain">約半額</p>
+                  </div>
+                  <div class="price-compare-hlBox">
+                    <p class="price-compare-hlSub">1 対 2 の個別指導と</p>
+                    <p class="price-compare-hlMain">ほぼ同じ料金</p>
+                  </div>
+                </div>
+
+                <p class="price-compare-note">
+                  ※「当塾調べ」の金額は、当塾が資料の取り寄せや教室での説明で確認した、清瀬市周辺の大手個別指導塾の中学 2 年生・週 1 回の月額です。授業料と毎月かかる諸費用を含み、入塾金・季節講習・教材費は含みません。料金は塾・教室・時期によって異なります。塾名は控えています。
+                </p>
+              </div>
+            </div>
+
+            <!-- ===== 月謝のしくみ（フォーマットを活かした3枚カード） ===== -->
+            <div class="page-module__rgAlwq__block" style="margin-top: 56px;">
+              <h3 class="page-module__rgAlwq__subHead" data-tone="gold">月謝のしくみ</h3>
               <p class="bodyText page-module__rgAlwq__blockLead">
-                月謝は「コマ代 ＋ 施設管理費 ＋
-                定額サポート費」で計算します。このうち施設管理費と定額サポート費は毎月定額で、受講するコマ数によって変わりません。
+                月謝は「コマ代 ＋ 生徒管理費」で計算します。生徒管理費は毎月定額で、受講するコマ数によって変わりません。余計な追加費用を心配することなく、安心して学習に集中していただける明朗な料金体系です。
               </p>
               <div class="page-module__rgAlwq__partList">
                 <div class="page-module__rgAlwq__partCard">
                   <span aria-hidden="true" class="page-module__rgAlwq__mark" data-tone="green"></span>
-                  <p class="page-module__rgAlwq__partTitle">コマ代</p>
+                  <p class="page-module__rgAlwq__partTitle">コマ代（授業料）</p>
                   <p class="page-module__rgAlwq__partBody">
                     授業そのものにかかる費用です。 1 コマ 80 分・完全 1 対 1 。学年ごとに 1 コマの授業料が決まっていて、受講するコマ数をかけたものが月々のコマ代になります。
                   </p>
                 </div>
                 <div class="page-module__rgAlwq__partCard">
                   <span aria-hidden="true" class="page-module__rgAlwq__mark" data-tone="orange"></span>
-                  <p class="page-module__rgAlwq__partTitle">施設管理費</p>
+                  <p class="page-module__rgAlwq__partTitle">生徒管理費</p>
                   <p class="page-module__rgAlwq__partBody">
-                    教室の設備・学習環境の維持にかかる費用です。学年・受講コマ数にかかわらず、全学年一律の金額です。
+                    教室の設備・学習環境の維持や、学習管理・面談体制にかかる費用です。学年・コースにより月額 2,850 円 〜 3,060 円となります。
                   </p>
                 </div>
                 <div class="page-module__rgAlwq__partCard">
                   <span aria-hidden="true" class="page-module__rgAlwq__mark" data-tone="gold"></span>
-                  <p class="page-module__rgAlwq__partTitle">定額サポート費</p>
+                  <p class="page-module__rgAlwq__partTitle">入塾金・教材費</p>
                   <p class="page-module__rgAlwq__partBody">
-                    学習管理・ご家庭への報告・面談体制にかかる費用です。受講コマ数が増えても金額は変わらず、講習授業・テスト対策・追加コマにはかかりません。
+                    入塾金は 0 円です。また、授業で使用する教材は原則教室でご用意するため、高額な教材費がかかることはありません。
                   </p>
                 </div>
               </div>
-              <p class="page-module__rgAlwq__blockNote">
-                定額サポート費は、学年・コースによって金額が異なります。中高一貫校サポートコース・不登校サポートコースは、学年を問わず受験学年と同じ金額となります。
-              </p>
             </div>
+
             <div class="page-module__rgAlwq__block">
-              <h3 class="page-module__rgAlwq__subHead" data-tone="orange">講習授業・テスト対策</h3>
+              <h3 class="page-module__rgAlwq__subHead" data-tone="sky">講習授業・テスト対策</h3>
               <p class="bodyText page-module__rgAlwq__blockLead">
-                通常授業とは別に、春期・夏期・冬期の講習授業と、定期テストやVもぎ・北辰テストに向けたテスト対策をご用意しています。いずれも受講は任意で、必要なコマ数はお子様の状況に合わせてご提案します。
+                通常授業とは別に、春期・夏期・冬期の講習授業と、定期テストや模擬試験に向けたテスト対策をご用意しています。いずれも受講は任意で、必要なコマ数はお子様の状況に合わせてご提案します。
               </p>
               <ul class="page-module__rgAlwq__noteList">
                 <li>
                   <strong>講習授業・テスト対策</strong>：通常の 1 コマの授業料よりも割安な料金でご受講いただけます。
                 </li>
                 <li>
-                  <strong>定額サポート費はかかりません</strong
-                  >：講習授業・テスト対策・追加コマには、サポート費が加算されません。かかるのはコマ代のみです。
+                  <strong>生徒管理費の加算はありません</strong
+                  >：講習授業・テスト対策・追加コマを受講しても、生徒管理費が増えることはありません。かかるのはコマ代のみです。
                 </li>
               </ul>
             </div>
             <div class="page-module__rgAlwq__block">
-              <h3 class="page-module__rgAlwq__subHead" data-tone="gold">入塾金・教材費・割引</h3>
+              <h3 class="page-module__rgAlwq__subHead" data-tone="navy">割引・お支払い方法</h3>
               <div class="page-module__rgAlwq__otherList">
                 <div class="page-module__rgAlwq__otherRow">
-                  <p class="page-module__rgAlwq__otherLabel">入塾金</p>
-                  <p class="page-module__rgAlwq__otherValue">かかりません</p>
-                  <p class="page-module__rgAlwq__otherNote">入塾時にいただく費用はありません。</p>
-                </div>
-                <div class="page-module__rgAlwq__otherRow">
-                  <p class="page-module__rgAlwq__otherLabel">教材費</p>
-                  <p class="page-module__rgAlwq__otherValue">原則不要</p>
-                  <p class="page-module__rgAlwq__otherNote">
-                    教材は教室でご用意します。英単語帳など市販の教材が必要な場合のみ実費となり、事前にご案内します。
-                  </p>
-                </div>
-                <div class="page-module__rgAlwq__otherRow">
                   <p class="page-module__rgAlwq__otherLabel">兄弟姉妹割引</p>
-                  <p class="page-module__rgAlwq__otherValue">施設管理費をいただきません</p>
+                  <p class="page-module__rgAlwq__otherValue">生徒管理費をいただきません</p>
                   <p class="page-module__rgAlwq__otherNote">
-                    ご兄弟・ご姉妹でご通塾の場合、下の学年の生徒様の施設管理費をいただきません。
+                    ご兄弟・ご姉妹でご通塾の場合、下の学年の生徒様の生徒管理費を全額免除いたします。
                   </p>
                 </div>
                 <div class="page-module__rgAlwq__otherRow">
@@ -322,9 +411,6 @@
                 </div>
               </div>
             </div>
-            <p class="page-module__rgAlwq__pageNote">
-              上記はいずれも清瀬校のご案内です。 2026 年 11 月のプレオープン、 12 月の完全オープンに向けて準備中のため、料金体系・時間割は変更となる場合があります。
-            </p>
             <div style="margin-top: 28px">
               <a class="CtaButton-module__YcQGIq__btn CtaButton-module__YcQGIq__primary" href="../contact/index.html"
                 ><span class="CtaButton-module__YcQGIq__label">料金について問い合わせる</span

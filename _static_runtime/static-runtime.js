@@ -155,12 +155,31 @@
     });
   }
 
+  /* ========================================================
+   * お問い合わせフォーム設定・送信管理
+   * 
+   * 【フォームの送信先やデータ確認について】
+   * ・現在はローカル確認用サンプルのため、送信処理は停止（ガード）されています。
+   * ・今後、本番サーバーや外部サービス（WordPress、Googleフォーム、GAS、Formrun等）
+   *   と連携する際は、下記の endpointUrl に送信先URLを設定してください。
+   * ======================================================== */
+  var CONTACT_FORM_CONFIG = {
+    // 送信先URL（例: '/api/contact' や Google Apps ScriptのWebアプリURL、Formrun等のURL）
+    // 空文字の場合はローカルガードが動作し、メッセージを表示します。
+    endpointUrl: '',
+    // 通知・確認用メールアドレス（メモ）
+    adminEmail: 'info@smile-study.com',
+    // ローカル環境での自動ブロック（true: 誤送信防止メッセージを表示, false: endpointUrlに送信）
+    preventLocalSubmit: true
+  };
+
   function initContactLocalGuard() {
     var form = document.querySelector('form');
     if (!form || !form.querySelector('[class*="ContactForm-module"]')) return;
-    // Preserve all native field interactions. Do not fake a successful submission locally.
+
     form.addEventListener('submit', function (ev) {
-      if (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:') {
+      var isLocal = (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:');
+      if (!CONTACT_FORM_CONFIG.endpointUrl || (isLocal && CONTACT_FORM_CONFIG.preventLocalSubmit)) {
         ev.preventDefault();
         var old = form.querySelector('.ss-local-form-notice');
         if (old) old.remove();
@@ -197,12 +216,31 @@
     setTimeout(function () { splash.remove(); }, 3600);
   }
 
+  function initPriceCharts() {
+    var charts = document.querySelectorAll('.price-compare-box');
+    if (!charts.length) return;
+    if (!('IntersectionObserver' in window)) {
+      charts.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    charts.forEach(function (el) { observer.observe(el); });
+  }
+
   function init() {
     initHeader();
     initReveal();
     initFaq();
     initCarousels();
     initContactLocalGuard();
+    initPriceCharts();
     // Splash is intentionally last so layout is already painted beneath it.
     initSplashOnce();
   }

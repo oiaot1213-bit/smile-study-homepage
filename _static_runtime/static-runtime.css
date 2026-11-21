@@ -180,6 +180,9 @@ html:not(.ss-static-runtime) .Reveal-module__vCs_Ea__reveal {
     column-gap: 48px !important;
     row-gap: 0 !important;
   }
+  .FourScSection-module__IQ6W-W__row:nth-child(3) {
+    border-bottom: 1px solid var(--c-blue-gray-deep) !important;
+  }
 }
 
 /* お問い合わせ: アコーディオンメニュー */
@@ -335,4 +338,517 @@ details[open] > .contact-accordion__summary .contact-accordion__icon svg {
 .page-module__LQPW5G__individual {
   border-top: none !important;
   padding-top: 0 !important;
+}
+
+/* 講師紹介: 新しい講師カード (横3個、縦2個) */
+.page-module__dmOpMq__teacherGrid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 24px !important;
+  margin-top: 48px !important;
+}
+@media (min-width: 680px) {
+  .page-module__dmOpMq__teacherGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (min-width: 1024px) {
+  .page-module__dmOpMq__teacherGrid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+.teacherCard-v2 {
+  background: var(--c-white);
+  border: 1px solid var(--c-blue-gray-deep);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card-soft);
+}
+
+.teacherCard-v2__top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.teacherCard-v2__photoWrap {
+  width: 105px;
+  height: 115px;
+  flex: none;
+  background: var(--c-blue-gray);
+  border: 1px solid var(--c-blue-gray-deep);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--t-faint);
+  gap: 6px;
+}
+
+.teacherCard-v2__photoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--t-faint);
+}
+
+.teacherCard-v2__photoCaption {
+  font-size: 10.5px;
+  color: var(--t-faint);
+  font-weight: 500;
+}
+
+.teacherCard-v2__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.teacherCard-v2__name {
+  font-family: var(--font-jp-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--t-main);
+  line-height: 1.3;
+}
+
+.teacherCard-v2__school {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--c-orange-deep);
+  line-height: 1.4;
+}
+
+.teacherCard-v2__tagRow {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.teacherCard-v2__tag {
+  border-radius: var(--radius-pill);
+  background: var(--c-ivory);
+  border: 1px solid var(--c-blue-gray-deep);
+  color: var(--t-sub);
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.teacherCard-v2__bottom {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.teacherCard-v2__section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.teacherCard-v2__heading {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--t-main);
+  margin-bottom: 2px;
+}
+
+.teacherCard-v2__item {
+  font-size: 12.5px;
+  color: var(--t-sub);
+  line-height: 1.7;
+}
+
+.teacherCard-v2__comment {
+  font-size: 12.5px;
+  color: var(--t-sub);
+  line-height: 1.8;
+}
+
+/* 講師紹介: Final CTA 見出しの折り返し調整 */
+.teachers-cta-title-part {
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+/* ========================================================
+   時間割・価格ページ: 費用カード & 料金比較グラフ
+   ======================================================== */
+
+/* 費用について: 2カラムカード */
+.price-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 36px;
+  max-width: 680px;
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .price-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 680px;
+    margin-inline: auto;
+  }
+}
+
+.price-summary-card {
+  background: var(--c-white);
+  border: 1px solid var(--c-blue-gray-deep);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card-soft);
+}
+
+.price-summary-badge {
+  position: absolute;
+  top: -14px;
+  left: 28px;
+  background: var(--c-orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 10px rgba(240, 140, 40, 0.35);
+  letter-spacing: 0.04em;
+}
+
+.price-summary-cardTitle {
+  font-family: var(--font-jp-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--t-main);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--c-ivory);
+}
+
+.price-summary-item {
+  margin-bottom: 20px;
+}
+.price-summary-itemLabel {
+  font-size: 13px;
+  color: var(--t-sub);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.price-summary-itemValue {
+  font-family: var(--font-en);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-orange-deep);
+  line-height: 1.2;
+}
+.price-summary-itemValue span {
+  font-family: var(--font-jp-heading);
+  font-size: 16px;
+  margin-left: 2px;
+}
+.price-summary-note {
+  font-size: 12px;
+  color: var(--t-faint);
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+/* 受講モデルケース */
+.price-model-header {
+  margin-bottom: 20px;
+}
+.price-model-target {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--t-main);
+}
+.price-model-detail {
+  font-size: 12.5px;
+  color: var(--t-sub);
+  margin-top: 2px;
+}
+
+.price-model-table {
+  background: var(--c-ivory);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 8px;
+}
+.price-model-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--c-blue-gray-deep);
+  font-size: 14px;
+}
+.price-model-row:last-child {
+  border-bottom: none;
+}
+.price-model-rowTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0 4px;
+  margin-top: 6px;
+  border-top: 2px solid var(--c-blue-gray-deep);
+}
+.price-model-totalLabel {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--t-main);
+}
+.price-model-totalValue {
+  font-family: var(--font-en);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--c-navy-deep);
+}
+.price-model-totalValue span {
+  font-family: var(--font-jp-heading);
+  font-size: 15px;
+  margin-left: 2px;
+}
+
+/* 料金比較グラフセクション */
+.price-compare-section {
+  margin-top: 56px;
+}
+.price-compare-head {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.price-compare-eyebrow {
+  color: var(--c-green-deep);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.price-compare-title {
+  font-family: var(--font-jp-heading);
+  font-size: clamp(1.4rem, 1.2rem + 1vw, 1.85rem);
+  font-weight: 700;
+  color: var(--t-main);
+  line-height: 1.5;
+}
+
+.price-compare-box {
+  background: var(--c-white);
+  border: 1px solid var(--c-blue-gray-deep);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-card-soft);
+}
+@media (max-width: 640px) {
+  .price-compare-box {
+    padding: 24px 18px;
+  }
+}
+
+.price-compare-intro {
+  margin-bottom: 32px;
+}
+.price-compare-introLead {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--t-main);
+  margin-bottom: 4px;
+}
+.price-compare-introSub {
+  font-size: 13px;
+  color: var(--t-sub);
+}
+
+.price-chart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.price-chart-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  .price-chart-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+.price-chart-labelCol {
+  display: flex;
+  flex-direction: column;
+}
+.price-chart-labelMain {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--t-main);
+}
+.price-chart-labelSub {
+  font-size: 11px;
+  color: var(--t-faint);
+  margin-top: 2px;
+}
+
+.price-chart-barTrack {
+  background: var(--c-ivory);
+  height: 44px;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
+.price-chart-barFill {
+  height: 100%;
+  border-radius: var(--radius-md);
+  width: 0%;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 14px;
+}
+.Reveal-module__vCs_Ea__visible .price-chart-barFill,
+.price-compare-box.is-visible .price-chart-barFill {
+  width: var(--chart-w);
+}
+
+.price-chart-barFill--gray {
+  background: #a0aec0;
+}
+.price-chart-barFill--lightGreen {
+  background: #bbf7d0;
+}
+.price-chart-barFill--smile {
+  background: linear-gradient(90deg, var(--c-green), var(--c-green-deep));
+}
+
+.price-chart-barText {
+  font-size: 13.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.price-chart-barText--white {
+  color: #fff;
+  font-family: var(--font-en);
+}
+.price-chart-barText--outside {
+  position: absolute;
+  left: calc(var(--chart-w) + 12px);
+  white-space: nowrap;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--t-main);
+}
+.price-chart-barText--smileOut {
+  color: var(--c-green-deep);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* 2つのハイライトボックス */
+.price-compare-highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 2px solid var(--c-blue-gray-deep);
+}
+@media (min-width: 600px) {
+  .price-compare-highlights {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+.price-compare-hlBox {
+  background: #fff5f5;
+  border: 1.5px solid #feb2b2;
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  text-align: center;
+}
+.price-compare-hlSub {
+  font-size: 13px;
+  color: var(--t-sub);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.price-compare-hlMain {
+  font-family: var(--font-jp-heading);
+  font-size: 22px;
+  font-weight: 800;
+  color: #e53e3e;
+  letter-spacing: 0.02em;
+}
+
+.price-compare-note {
+  margin-top: 24px;
+  font-size: 12px;
+  color: var(--t-faint);
+  line-height: 1.85;
+}
+
+/* 合格実績ページ: 実績ブロックとVOICESセクション間の空白を半分に調整 */
+.results-preview-section {
+  padding-bottom: 36px !important;
+}
+@media (min-width: 900px) {
+  .results-preview-section {
+    padding-bottom: 74px !important;
+  }
+}
+.results-voices-section {
+  padding-top: 36px !important;
+}
+@media (min-width: 900px) {
+  .results-voices-section {
+    padding-top: 74px !important;
+  }
+}
+
+/* 時間割・価格ページ: 見出しの線の色バリエーション */
+.page-module__rgAlwq__subHead[data-tone=green]:before {
+  background: var(--c-green) !important;
+}
+.page-module__rgAlwq__subHead[data-tone=orange]:before {
+  background: var(--c-orange) !important;
+}
+.page-module__rgAlwq__subHead[data-tone=gold]:before {
+  background: var(--c-gold) !important;
+}
+.page-module__rgAlwq__subHead[data-tone=sky]:before {
+  background: #38bdf8 !important;
+}
+.page-module__rgAlwq__subHead[data-tone=navy]:before {
+  background: #3b82f6 !important;
+}
+
+/* 教室紹介: 授業・面談・自習スペースカードのホバー演出（影・浮き上がり）を無効化 */
+.page-module__4gXN-q__spaceCard {
+  transition: none !important;
+}
+.page-module__4gXN-q__spaceCard:hover {
+  box-shadow: none !important;
+  transform: none !important;
 }
