@@ -852,3 +852,37 @@ details[open] > .contact-accordion__summary .contact-accordion__icon svg {
   box-shadow: none !important;
   transform: none !important;
 }
+
+/* 塾長からのご挨拶: 本文の段落間隔の半減および箇条書きリストのスタイル調整 */
+.page-module__EjwxLq__bodyCol {
+  gap: 11px !important;
+}
+.page-module__EjwxLq__bodyCol .bodyText + .bodyText {
+  margin-top: 8px !important;
+}
+.page-module__EjwxLq__bodyCol .message-bullet-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+}
+.page-module__EjwxLq__bodyCol .message-bullet-list li {
+  position: relative !important;
+  padding-left: 14px !important;
+  font-size: 14.5px !important;
+  line-height: 2.05 !important;
+  color: var(--t-sub) !important;
+  max-width: 62ch !important;
+}
+.page-module__EjwxLq__bodyCol .message-bullet-list li:before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0.75em !important;
+  width: 5px !important;
+  height: 5px !important;
+  border-radius: 50% !important;
+  background-color: var(--t-sub, #4b5563) !important;
+}
+
